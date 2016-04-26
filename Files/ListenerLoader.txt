@@ -1,0 +1,16 @@
+net.trpfrog.frogrobo.text_analysis.AnalysisListener
+net.trpfrog.frogrobo.help.HelpListener
+net.trpfrog.frogrobo.mini_tools.PingListener
+net.trpfrog.frogrobo.text_analysis.StringCutterListener
+net.trpfrog.frogrobo.mini_tools.ToBinaryListener
+net.trpfrog.frogrobo.text_analysis.ToHiraganaListener
+net.trpfrog.frogrobo.mini_tools.TranslateBoxLangListener
+net.trpfrog.frogrobo.mini_tools.TransposeListener
+net.trpfrog.frogrobo.mini_tools.FortuneListener
+net.trpfrog.frogrobo.weather.WeatherListener
+net.trpfrog.frogrobo.weather.SunrisetListener
+net.trpfrog.frogrobo.mini_tools.ChanceListener
+net.trpfrog.frogrobo.mini_tools.AnagramListener
+net.trpfrog.frogrobo.mini_tools.PlzFavMeListener
+net.trpfrog.frogrobo.mini_tools.WhatIsThisFlagListener
+net.trpfrog.frogrobo.hit_and_blow.HitAndBlowListener
