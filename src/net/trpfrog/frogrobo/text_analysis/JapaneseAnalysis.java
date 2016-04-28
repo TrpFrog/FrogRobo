@@ -17,7 +17,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
-import net.trpfrog.frogrobo.FrogRobo;
+import net.trpfrog.frogrobo.main.FrogRobo;
 
 public class JapaneseAnalysis {
 

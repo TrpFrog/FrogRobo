@@ -10,8 +10,8 @@ import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.SystemUtils;
 
-import net.trpfrog.frogrobo.FrogRobo;
 import net.trpfrog.frogrobo.hit_and_blow.HitAndBlowListener;
+import net.trpfrog.frogrobo.main.FrogRobo;
 import net.trpfrog.frogrobo.mini_tools.ToolsLoader;
 import net.trpfrog.frogrobo.streaming.MentionListenerPlus;
 import twitter4j.Status;

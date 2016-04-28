@@ -10,8 +10,8 @@ import java.util.stream.Stream;
 
 import org.apache.commons.lang3.SystemUtils;
 
-import net.trpfrog.frogrobo.FrogRobo;
 import net.trpfrog.frogrobo.autoreply.AutoReply;
+import net.trpfrog.frogrobo.main.FrogRobo;
 import twitter4j.StallWarning;
 import twitter4j.Status;
 import twitter4j.StatusDeletionNotice;

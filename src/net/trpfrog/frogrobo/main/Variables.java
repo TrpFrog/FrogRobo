@@ -1,4 +1,4 @@
-package net.trpfrog.frogrobo;
+package net.trpfrog.frogrobo.main;
 
 
 /**

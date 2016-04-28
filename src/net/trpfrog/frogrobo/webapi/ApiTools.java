@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.SystemUtils;
 
-import net.trpfrog.frogrobo.FrogRobo;
+import net.trpfrog.frogrobo.main.FrogRobo;
 
 public class ApiTools {
 

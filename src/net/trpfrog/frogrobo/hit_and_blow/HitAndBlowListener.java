@@ -3,8 +3,8 @@ package net.trpfrog.frogrobo.hit_and_blow;
 import java.io.IOException;
 import java.util.HashMap;
 
-import net.trpfrog.frogrobo.FrogRobo;
-import net.trpfrog.frogrobo.Tools;
+import net.trpfrog.frogrobo.main.FrogRobo;
+import net.trpfrog.frogrobo.main.Tools;
 import net.trpfrog.frogrobo.mini_tools.ToolsLoader;
 import net.trpfrog.frogrobo.streaming.MentionListenerPlus;
 import twitter4j.Status;

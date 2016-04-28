@@ -2,8 +2,8 @@ package net.trpfrog.frogrobo.playground;
 
 import java.io.IOException;
 
-import net.trpfrog.frogrobo.FrogRobo;
-import net.trpfrog.frogrobo.Tools;
+import net.trpfrog.frogrobo.main.FrogRobo;
+import net.trpfrog.frogrobo.main.Tools;
 
 public class Playground1 {
 	public static void main(String[] args) {
