@@ -1,4 +1,4 @@
-package net.trpfrog.frogrobo.main;
+package net.trpfrog.frogrobo;
 
 import java.awt.BorderLayout;
 import java.awt.Font;

@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import net.trpfrog.frogrobo.main.Tools;
+import net.trpfrog.frogrobo.Tools;
 import net.trpfrog.frogrobo.streaming.MentionListenerPlus;
 import net.trpfrog.frogrobo.streaming.StreamListener;
 import net.trpfrog.frogrobo.streaming.TweetStream;
