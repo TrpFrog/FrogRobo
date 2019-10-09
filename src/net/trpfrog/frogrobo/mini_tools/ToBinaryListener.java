@@ -11,9 +11,7 @@ import twitter4j.TwitterException;
 public class ToBinaryListener extends MentionListenerPlus{
 
 	@Override
-	public String getCommandName() { return "toBase"; }
-	@Override
-	public String getShortCommand() { return "base"; }
+	public String getCommandName() { return "to_Base"; }
 	@Override
 	public String getCommandUsage() { return this.getCommandName()+" [変換対象数列] [対象はn進数]"; }
 	@Override
@@ -142,7 +140,7 @@ public class ToBinaryListener extends MentionListenerPlus{
 	}
 
 	@Override
-	public void mention(Status status) {
+	public void whenMentioned(Status status) {
 
 	}
 

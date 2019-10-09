@@ -6,11 +6,10 @@ import twitter4j.Status;
 public class PingListener extends MentionListenerPlus{
 
 	@Override
-	public String getCommandName() { return "bootCheck"; }
+	public String getCommandName() { return "ping"; }
+
 	@Override
-	public String getShortCommand() { return "ping"; }
-	@Override
-	public String getCommandUsage() { return this.getCommandLowerCase(); }
+	public String getCommandUsage() { return this.getCommandName(); }
 	@Override
 	public String getCommandDescription() {return "起動しているかの確認に使います";}
 	@Override
@@ -22,7 +21,7 @@ public class PingListener extends MentionListenerPlus{
 	}
 
 	@Override
-	public void mention(Status status) {
+	public void whenMentioned(Status status) {
 	}
 
 }

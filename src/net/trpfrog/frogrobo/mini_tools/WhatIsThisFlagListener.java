@@ -11,9 +11,8 @@ import twitter4j.Status;
 public class WhatIsThisFlagListener extends MentionListenerPlus{
 
 	@Override
-	public String getCommandName() { return "whatIsThisFlag"; }
-	@Override
-	public String getShortCommand() { return "flag"; }
+	public String getCommandName() { return "search_flag"; }
+
 	@Override
 	public String getCommandUsage() { return this.getCommandLowerCase(); }
 	@Override
@@ -51,7 +50,7 @@ public class WhatIsThisFlagListener extends MentionListenerPlus{
 	}
 
 	@Override
-	public void mention(Status status) {
+	public void whenMentioned(Status status) {
 	}
 }
 

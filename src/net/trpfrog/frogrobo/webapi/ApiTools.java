@@ -38,7 +38,7 @@ public class ApiTools {
 		List<String> key = new ArrayList<>();
 		final String FS = SystemUtils.FILE_SEPARATOR;
 		StringBuilder path = new StringBuilder();
-		path.append(FrogRobo.FILE_PASS);
+		path.append(FrogRobo.FILE_PATH);
 		path.append("SecretFiles");
 		path.append(FS);
 		path.append(this.apiKeyFileName);

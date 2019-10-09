@@ -1,22 +1,23 @@
 package net.trpfrog.frogrobo.playground;
 
 import java.io.IOException;
+import java.util.*;
 
 import net.trpfrog.frogrobo.FrogRobo;
 import net.trpfrog.frogrobo.Tools;
 
 public class Playground1 {
+
 	public static void main(String[] args) {
-		String path = Tools.generatePath(FrogRobo.FILE_PASS,"Files","HitAndBlowPlayers.txt");
-		try {
-			Tools.writeAllNewText(path,
-					"TrpFrog 124124534",
-					"negiiiiiissei 42124245",
-					"Rei_248 34235545",
-					"ilike510 531434311");
-		} catch (IOException e) {
-			// TODO 自動生成された catch ブロック
-			e.printStackTrace();
+		String spaceRegex = "[ \\n	　]";
+		String[] commands = "@TrpFrog ping つまみ".split(spaceRegex);
+		List<String> cmdList = new ArrayList<>(Arrays.asList(commands));
+		cmdList.removeIf(s -> s.equals(""));
+		String[] stLs = cmdList.toArray(new String[cmdList.size()]);
+
+		for (String s : stLs) {
+			System.out.println(s);
 		}
+
 	}
 }

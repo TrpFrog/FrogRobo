@@ -10,11 +10,8 @@ import twitter4j.Status;
 public class StringCutterListener extends MentionListenerPlus{
 	@Override
 	public String getCommandName() {
-		return "WordCutter";
+		return "wordcut";
 	}
-
-	@Override
-	public String getShortCommand() { return "wdct"; }
 
 	@Override
 	public String getCommandUsage() {
@@ -65,6 +62,6 @@ public class StringCutterListener extends MentionListenerPlus{
 	}
 
 	@Override
-	public void mention(Status status) {
+	public void whenMentioned(Status status) {
 	}
 }

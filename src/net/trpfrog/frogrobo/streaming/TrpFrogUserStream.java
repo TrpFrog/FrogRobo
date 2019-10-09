@@ -4,10 +4,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
-
-import org.apache.commons.lang3.SystemUtils;
 
 import net.trpfrog.frogrobo.FrogRobo;
 import twitter4j.StallWarning;
@@ -17,28 +16,18 @@ import twitter4j.StatusListener;
 import twitter4j.TwitterException;
 import twitter4j.TwitterStreamFactory;
 
-public class TrpFrogUserStream extends StreamingSetter{
+public class TrpFrogUserStream extends CommandStreaming{
 
-	private static TrpFrogUserStream trpfrog = new TrpFrogUserStream();
+	private static TrpFrogUserStream trpfrog;
 
 	private List<MentionListener> listenerList = new ArrayList<>();
 
-	private TrpFrogUserStream(){
-		final String FS = SystemUtils.FILE_SEPARATOR;
-		StringBuilder path = new StringBuilder();
-		path.append(FrogRobo.FILE_PASS);
-		path.append("SecretFiles");
-		path.append(FS);
-		path.append("TrpFrogAPIKeys.txt");
-		try (Stream<String> keyStream = Files.lines(Paths.get(path.toString()));){
-			this.setKey(keyStream, false);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		this.stream = new TwitterStreamFactory(getBuilder().build()).getInstance();
+	private TrpFrogUserStream() throws IOException, TwitterException {
+		super(keyFileReader("TrpFrogAPIKeys.txt"));
+		super.applyStream();
 	}
 
-	public static TrpFrogUserStream getInstance(){
+	public static TrpFrogUserStream getInstance() throws IOException, TwitterException {
 		if(trpfrog==null){
 			trpfrog = new TrpFrogUserStream();
 		}
@@ -63,32 +52,38 @@ public class TrpFrogUserStream extends StreamingSetter{
 				String lowerScreenName = "@"+trpfrog.getTwitter().getScreenName().toLowerCase();
 				@Override
 				public void onStatus(Status status) {
-					final boolean REPLY = status.getText().toLowerCase().matches("^"+lowerScreenName+".*");
-					final boolean MENTION = status.getText().toLowerCase().matches(".*"+lowerScreenName+".*")||REPLY;
 
-					if (MENTION) {
-						for(MentionListener listener : listenerList){
-							System.out.println("[in to "+listener.getCommandName()+"]");
-							if(REPLY){
-								String[] commands = status.getText().split("( |\n)");
-								listener.reply(status, commands);
-							}
-							listener.mention(status);
-						}
-					}
+					streamListenerList.forEach(listener->listener.allTweet(status));
+
+					System.out.println("["+status.getUser().getName()+"("+status.getUser().getScreenName()+")]");
+					System.out.println(status.getText());
+
+					tweetAction(status);
+
+					System.out.println("[exit from onStatus]");
 				}
 			});
 		} catch (TwitterException e) {
 			e.printStackTrace();
 		}
-		stream.user();
+		stream.filter("@trpfrog");
 		System.out.println("[TrpFrog - UserStreaming started]");
 	}
 
+	/**
+	 * TrpFrog用の自作リスナーをセットします。
+	 * @param l
+	 */
+	@Deprecated
 	public void addListener(MentionListener l){
 		listenerList.add(l);
 	}
 
+	/**
+	 * 登録されているリスナーのリストを返します。
+	 * @return リスナーリスト
+	 */
+	@Deprecated
 	public List<MentionListener> getListenerList(){
 		return listenerList;
 	}

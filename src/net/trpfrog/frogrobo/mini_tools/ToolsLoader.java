@@ -18,7 +18,9 @@ public final class ToolsLoader {
 	 * @param inReplyTo リプライを飛ばす先のツイート
 	 * @param dateTweet 日付付きツイートにするかどうか
 	 * @throws IllegalArgumentException ツイートが140文字を超える場合
+	 * @Deprecated このクラスは廃止予定です。代わりにMentionListenerPlus.reply()を使ってください。
 	 */
+	@Deprecated
 	public static void reply(String tweet, Status inReplyTo, boolean dateTweet) {
 		final String SCREEN_NAME = "@" + inReplyTo.getUser().getScreenName() + " ";
 		String date = "";
@@ -31,12 +33,12 @@ public final class ToolsLoader {
 		final int MAX_LENGTH = 140 - (SCREEN_NAME + date).length();
 
 		if (tweet.length() >= MAX_LENGTH) {
-			StrBuilder sb = new StrBuilder();
+			StringBuilder sb = new StringBuilder();
 			sb.append("メッセージが長過ぎます。");
-			sb.appendNewLine();
+			sb.append(System.lineSeparator());
 			sb.append(MAX_LENGTH);
 			sb.append("文字以内にしてください");
-			sb.appendNewLine();
+			sb.append(System.lineSeparator());
 			sb.append("(「").append(tweet).append("」は");
 			sb.append(tweet.length());
 			sb.append("文字で");
@@ -52,6 +54,5 @@ public final class ToolsLoader {
 		} catch (TwitterException e) {
 			throw new IllegalArgumentException();
 		}
-
 	}
 }

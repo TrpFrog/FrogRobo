@@ -29,11 +29,6 @@ public class BlackListListener extends MentionListenerPlus {
 		return null;
 	}
 
-	@Override
-	public String getShortCommand() {
-		// TODO 自動生成されたメソッド・スタブ
-		return null;
-	}
 
 	@Override
 	public void doWhenReceiveCommand(Status status, String[] commands) {
@@ -42,7 +37,7 @@ public class BlackListListener extends MentionListenerPlus {
 	}
 
 	@Override
-	public void mention(Status status) {
+	public void whenMentioned(Status status) {
 		// TODO 自動生成されたメソッド・スタブ
 
 	}

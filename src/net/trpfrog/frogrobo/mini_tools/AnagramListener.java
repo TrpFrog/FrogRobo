@@ -13,8 +13,7 @@ public class AnagramListener extends MentionListenerPlus {
 
 	@Override
 	public String getCommandName() { return "Anagram"; }
-	@Override
-	public String getShortCommand() { return "angr"; }
+
 	@Override
 	public String getCommandUsage() { return this.getCommandLowerCase(); }
 	@Override
@@ -27,9 +26,10 @@ public class AnagramListener extends MentionListenerPlus {
 		if(commands.length == 2)
 			return;
 
-		StrBuilder sb = new StrBuilder();
-		sb.appendNewLine();
-		sb.appendln("【アナグラムしました(適当)】");
+		StringBuilder sb = new StringBuilder();
+		sb.append(System.lineSeparator());
+		sb.append("【アナグラムしました(適当)】");
+		sb.append(System.lineSeparator());
 		for(int i=2; i < commands.length ;i++){
 			Random rand = new Random(System.currentTimeMillis());
 			ArrayList<Character> charList = new ArrayList<>();
@@ -40,14 +40,14 @@ public class AnagramListener extends MentionListenerPlus {
 			charList.stream().forEach(e -> {
 				sb.append(e);
 			});
-			sb.appendNewLine();
+			sb.append(System.lineSeparator());
 		}
 
 		ToolsLoader.reply(sb.toString(), status, false);
 	}
 
 	@Override
-	public void mention(Status status) {
+	public void whenMentioned(Status status) {
 	}
 
 }

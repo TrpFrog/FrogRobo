@@ -13,8 +13,7 @@ public class HitAndBlowListener extends MentionListenerPlus {
 
 	@Override
 	public String getCommandName() { return "HitAndBlow"; }
-	@Override
-	public String getShortCommand() { return "hab"; }
+
 	@Override
 	public String getCommandUsage() { return this.getCommandLowerCase(); }
 	@Override
@@ -24,7 +23,7 @@ public class HitAndBlowListener extends MentionListenerPlus {
 
 	private static HashMap<Long,HitAndBlowPlayer> players = new HashMap<>();
 	private static String filePath = Tools.generatePath
-			(FrogRobo.FILE_PASS,"Files","HitAndBlowPlayers.txt");
+			(FrogRobo.FILE_PATH,"Files","HitAndBlowPlayers.txt");
 
 	private static final byte SUB_COMMAND = 2;
 	private static final byte LENGTH = 3;
@@ -153,7 +152,7 @@ public class HitAndBlowListener extends MentionListenerPlus {
 	}
 
 	private static int loops = 0;
-	private static void writePlayers(){
+	public static void writePlayers(){
 		String[] stringArray = new String[players.size()];
 		loops = 0;
 		players.keySet().stream().forEach(e->{
@@ -180,14 +179,14 @@ public class HitAndBlowListener extends MentionListenerPlus {
 		Runtime.getRuntime().addShutdownHook(new Thread() {
 			@Override
 			public void run() {
-				writePlayers();
+				HitAndBlowListener.writePlayers();
 			}
 		});
 		System.out.println("exitshut");
 	}
 
 	@Override
-	public void mention(Status status) {
+	public void whenMentioned(Status status) {
 	}
 
 }

@@ -3,12 +3,8 @@ package net.trpfrog.frogrobo.streaming;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Stream;
-
-import org.apache.commons.lang3.SystemUtils;
 
 import net.trpfrog.frogrobo.FrogRobo;
 import net.trpfrog.frogrobo.autoreply.AutoReply;
@@ -19,137 +15,82 @@ import twitter4j.StatusListener;
 import twitter4j.TwitterException;
 import twitter4j.TwitterStreamFactory;
 
-public class TweetStream extends StreamingSetter {
+public class TweetStream extends CommandStreaming {
 
 	public static final long FROGROBO_USER_ID = 2744579940L;
 
-	private static TweetStream frogrobo = new TweetStream();
+	private static TweetStream frogrobo;
 
-	private List<MentionListener> mentionListenerList = new ArrayList<>();
-
-	private List<StreamListener> streamListenerList = new ArrayList<>();
-
-	private TweetStream(){
-
-		final String FS = SystemUtils.FILE_SEPARATOR;
-		StringBuilder path = new StringBuilder();
-		path.append(FrogRobo.FILE_PASS);
-		path.append("SecretFiles");
-		path.append(FS);
-		path.append("FrogRoboAPIKeys.txt");
-		try (Stream<String> keyStream = Files.lines(Paths.get(path.toString()));){
-			this.setKey(keyStream, false);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		this.stream = new TwitterStreamFactory(getBuilder().build()).getInstance();
-	}
-
-	public static TweetStream getInstance(){
+	public static TweetStream getInstance() throws TwitterException {
 		if(frogrobo==null){
 			frogrobo = new TweetStream();
 		}
 		return frogrobo;
 	}
 
-	protected void doing(){
+	@Deprecated
+	private List<MentionListener> mentionListenerList = new ArrayList<>(); //追加はFrogRobo.javaでやっている...？
+
+
+	private TweetStream() throws TwitterException {
+		super();
 		try {
-			this.stream.addListener(new StatusListener(){
-
-				@Override
-				public void onException(Exception arg0) {}
-				@Override
-				public void onDeletionNotice(StatusDeletionNotice arg0) {}
-				@Override
-				public void onScrubGeo(long arg0, long arg1) {}
-				@Override
-				public void onStallWarning(StallWarning arg0) {}
-				@Override
-				public void onTrackLimitationNotice(int arg0) {}
-
-				String lowerScreenName = "@"+frogrobo.getTwitter().getScreenName().toLowerCase();
-				@Override
-				public void onStatus(Status status) {
-
-
-					streamListenerList.forEach(listener->listener.allTweet(status));
-
-					System.out.println("["+status.getUser().getName()+"("+status.getUser().getScreenName()+")]");
-					System.out.println(status.getText());
-
-					final boolean REPLY = status.getText().toLowerCase().matches("^"+lowerScreenName+"(.|\\\\n)*");
-					// @frogrobo (ケース問わず）で始まるツイートであればリプライと判断
-
-					final boolean MENTION = status.getText().toLowerCase().matches("(.|\\\\n)*"+lowerScreenName+"(.|\\\\n)*")||REPLY;
-					// リプライであるか、@frogroboが含まれているツイートはメンションと判断
-
-					System.err.println("  isReply:"+REPLY);
-					System.err.println("isMention:"+MENTION);
-
-					if (MENTION) {
-						boolean isCommandTweet = false;
-						String[] commands = status.getText().split("( |\\n)"); //スペースか改行で区切る
-						
-						for(MentionListener listener : mentionListenerList){
-							System.err.println("[in to "+listener.getCommandName()+"]");
-							if(REPLY){
-								listener.reply(status, commands);
-								if(listener.isThisCommand(commands)){
-									isCommandTweet = true;
-									break;
-								}
-							}
-							listener.mention(status);
-						}
-						if(isCommandTweet == false && REPLY){
-							new AutoReply().doWhenReceiveCommand(status,commands);
-						}
-					} else {
-						streamListenerList.forEach(listener->listener.normalTweet(status));
-					}
-					System.err.println("[exit from onStatus]");
-				}
-			});
-		} catch (TwitterException e) {
+			this.setKey(keyFileReader("FrogRoboAPIKeys.txt"), false);
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		super.stream.user();
+		super.applyStream();
+	}
+
+	/**
+	 * Stream起動時の動作を設定する。ここでリスナーに流れを書く。
+	 */
+	protected void doing(){
+		this.stream.addListener(new StatusListener(){
+
+			@Override
+			public void onException(Exception arg0) {}
+			@Override
+			public void onDeletionNotice(StatusDeletionNotice arg0) {}
+			@Override
+			public void onScrubGeo(long arg0, long arg1) {}
+			@Override
+			public void onStallWarning(StallWarning arg0) {}
+			@Override
+			public void onTrackLimitationNotice(int arg0) {}
+
+			@Override
+			public void onStatus(Status status) {
+
+				streamListenerList.forEach(listener->listener.allTweet(status));
+
+				System.out.println("["+status.getUser().getName()+"("+status.getUser().getScreenName()+")]");
+				System.out.println(status.getText());
+
+				tweetAction(status);
+
+				System.out.println("[exit from onStatus]");
+			}
+		});
+
+		super.stream.filter("@frogrobo");
+
 		try{
-			super.getTwitter().updateStatus("ロボを起動しました\n["+new Date()+"]");
+			super.getTwitter().updateStatus("ロボを起動しました on "+System.getProperty("os.name")+"\n["+new Date()+"]");
 		}catch(TwitterException e){
 			e.printStackTrace();
 		}
-		System.out.println("[FrogRobo - UserStreaming started]");
-		System.out.println("[ListenerCount:"+mentionListenerList.size()+"]");
-		for(int i=0;i<mentionListenerList.size();i++){
-			System.out.println("     ・"+mentionListenerList.get(i).getClass().getSimpleName());
-		}
+		System.out.println("[FrogRobo - Streaming started]");
+		System.out.println("[ListenerCount:"+mentionListenerMap.size()+"]");
+
+		mentionListenerMap.forEach((k,v)->{
+			System.out.println(v.getClass().getSimpleName());
+		});
 	}
 
-	public synchronized void addMentionListener(MentionListener l){
-		this.mentionListenerList.add(l);
-	}
-
-	public synchronized void removeMentionListener(MentionListener l){
-		this.mentionListenerList.remove(l);
-	}
-
+	@Deprecated
 	public List<MentionListener> getMentionListenerList(){
 		return this.mentionListenerList;
 	}
-
-	public synchronized void addStreamListener(StreamListener l){
-		this.streamListenerList.add(l);
-	}
-
-	public synchronized void removeStreamListener(StreamListener l){
-		this.streamListenerList.remove(l);
-	}
-
-	public List<StreamListener> getStreamListenerList(){
-		return this.streamListenerList;
-	}
-
-
 
 }

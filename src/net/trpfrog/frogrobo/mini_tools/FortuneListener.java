@@ -24,26 +24,31 @@ public class FortuneListener extends MentionListenerPlus {
 			}
 		}
 
-		StrBuilder sb = new StrBuilder();
-		sb.appendNewLine();
-		sb.appendln("【総合運】");
-		sb.appendln(fl.starBuilder(lucks[fl.TOTAL_LUCK]));
-		sb.appendln("【金銭運】");
-		sb.appendln(fl.starBuilder(lucks[fl.LUCK_OF_MONEY]));
-		sb.appendln("【恋愛運】");
-		sb.appendln(fl.starBuilder(lucks[fl.LUCK_OF_LOVE]));
-		sb.appendln("【仕事運】");
-		sb.appendln(fl.starBuilder(lucks[fl.LUCK_OF_WORK]));
-		sb.appendln("【健康運】");
-		sb.appendln(fl.starBuilder(lucks[fl.LUCK_OF_HEALTH]));
+		StringBuilder sb = new StringBuilder();
+
+		sb = appendln(sb,"【総合運】");
+		sb = appendln(sb,fl.starBuilder(lucks[fl.TOTAL_LUCK]));
+		sb = appendln(sb,"【金銭運】");
+		sb = appendln(sb,fl.starBuilder(lucks[fl.LUCK_OF_MONEY]));
+		sb = appendln(sb,"【恋愛運】");
+		sb = appendln(sb,fl.starBuilder(lucks[fl.LUCK_OF_LOVE]));
+		sb = appendln(sb,"【仕事運】");
+		sb = appendln(sb,fl.starBuilder(lucks[fl.LUCK_OF_WORK]));
+		sb = appendln(sb,"【健康運】");
+		sb = appendln(sb,fl.starBuilder(lucks[fl.LUCK_OF_HEALTH]));
 
 		System.out.println(sb.toString());
 	}
 
+	private static StringBuilder appendln (StringBuilder sb, String str){
+		sb.append(str);
+		sb.append(System.lineSeparator());
+		return sb;
+	}
+
 	@Override
 	public String getCommandName() { return "Fortune"; }
-	@Override
-	public String getShortCommand() { return "frtn"; }
+
 
 	@Override
 	public String getCommandUsage() { return this.getCommandLowerCase(); }
@@ -99,7 +104,7 @@ public class FortuneListener extends MentionListenerPlus {
 	}
 
 	@Override
-	public void mention(Status status) {
+	public void whenMentioned(Status status) {
 	}
 
 	private int fortuneTeller(){

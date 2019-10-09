@@ -10,8 +10,7 @@ public class WeatherListener extends MentionListenerPlus{
 
 	@Override
 	public String getCommandName() { return "weather"; }
-	@Override
-	public String getShortCommand() { return "tenki"; }
+
 	@Override
 	public String getCommandUsage() { return this.getCommandLowerCase()+" [地名] [Opt.:何日後の天気(0-6)]"; }
 	@Override
@@ -40,7 +39,7 @@ public class WeatherListener extends MentionListenerPlus{
 				daysLater = 0;
 			}
 			if(daysLater > 6){
-				ToolsLoader.reply("6日後よりあと、今日より前の天気は表示できません", status, true);
+				MentionListenerPlus.reply("6日後よりあと、今日より前の天気は表示できません", status, true);
 				return;
 			}
 		}
@@ -53,7 +52,7 @@ public class WeatherListener extends MentionListenerPlus{
 			try {
 				wp = new WeatherApi(lat, lon, daysLater);
 			} catch (APINetworkErrorException e) {
-				ToolsLoader.reply("お住まいの地域は対応していないか、位置情報機能がオフになっている可能性があります", status, true);
+				MentionListenerPlus.reply("お住まいの地域は対応していないか、位置情報機能がオフになっている可能性があります", status, true);
 				return;
 			}
 		}else{
@@ -61,7 +60,7 @@ public class WeatherListener extends MentionListenerPlus{
 				wp = new WeatherApi(commands[LOCATION],daysLater);
 				System.out.println(wp.getLocationName());
 			} catch (IllegalArgumentException | APINetworkErrorException e) {
-				ToolsLoader.reply("存在しない地名です", status, true);
+				MentionListenerPlus.reply("存在しない地名です", status, true);
 				return;
 			}
 		}
@@ -107,7 +106,7 @@ public class WeatherListener extends MentionListenerPlus{
 	}
 
 	@Override
-	public void mention(Status status) {
+	public void whenMentioned(Status status) {
 	}
 
 }

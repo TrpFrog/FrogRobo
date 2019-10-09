@@ -14,7 +14,7 @@ import org.apache.commons.lang3.SystemUtils;
 
 public class Tools {
 	public static Stream<String> getTextLineStream (String... path) throws IOException{
-		final String FS = SystemUtils.FILE_SEPARATOR;
+		final String FS = File.separator;
 		StringBuilder filePath = new StringBuilder();
 		Arrays.stream(path).forEach(e->filePath.append(e+FS));
 
@@ -32,7 +32,7 @@ public class Tools {
 	}
 
 	public static String generatePath (String... path){
-		final String FS = SystemUtils.FILE_SEPARATOR;
+		final String FS = File.separator;
 		StringBuilder filePath = new StringBuilder();
 		Arrays.stream(path).forEach(e->filePath.append(e+FS));
 		return filePath.toString();

@@ -9,8 +9,7 @@ public class PlzFavMeListener extends MentionListenerPlus{
 
 	@Override
 	public String getCommandName() { return "plzFav"; }
-	@Override
-	public String getShortCommand() { return "fav"; }
+
 	@Override
 	public String getCommandUsage() { return this.getCommandLowerCase()+" [Opt:TweetId]"; }
 	@Override
@@ -41,7 +40,7 @@ public class PlzFavMeListener extends MentionListenerPlus{
 	}
 
 	@Override
-	public void mention(Status status) {
+	public void whenMentioned(Status status) {
 	}
 
 }

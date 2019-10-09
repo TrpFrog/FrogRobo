@@ -11,9 +11,8 @@ import twitter4j.Status;
 
 public class TranslateBoxLangListener extends MentionListenerPlus{
 	@Override
-	public String getCommandName() { return "toHakoLang"; }
-	@Override
-	public String getShortCommand() { return "bxlg"; }
+	public String getCommandName() { return "to_HakoLang"; }
+
 	@Override
 	public String getCommandUsage() { return getCommandName()+" [翻訳対象文字列]"; }
 	@Override
@@ -64,7 +63,7 @@ public class TranslateBoxLangListener extends MentionListenerPlus{
 	}
 
 	@Override
-	public void mention(Status status) {
+	public void whenMentioned(Status status) {
 
 	}
 }

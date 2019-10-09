@@ -9,11 +9,8 @@ import twitter4j.Status;
 public class AnalysisListener extends MentionListenerPlus{
 	@Override
 	public String getCommandName() {
-		return "TextAnalysis";
+		return "analyze_text";
 	}
-
-	@Override
-	public String getShortCommand() { return "txly"; }
 
 	@Override
 	public String getCommandUsage() {
@@ -60,7 +57,7 @@ public class AnalysisListener extends MentionListenerPlus{
 	}
 
 	@Override
-	public void mention(Status status) {
+	public void whenMentioned(Status status) {
 
 	}
 

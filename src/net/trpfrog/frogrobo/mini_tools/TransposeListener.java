@@ -40,8 +40,7 @@ public class TransposeListener extends MentionListenerPlus {
 
 	@Override
 	public String getCommandName() { return "Transpose"; }
-	@Override
-	public String getShortCommand() { return "trps"; }
+
 	@Override
 	public String getCommandUsage() { return this.getCommandLowerCase()+" 移調元キー 移調先キー"; }
 	@Override
@@ -82,7 +81,7 @@ public class TransposeListener extends MentionListenerPlus {
 	}
 
 	@Override
-	public void mention(Status status) {
+	public void whenMentioned(Status status) {
 		// TODO 自動生成されたメソッド・スタブ
 
 	}

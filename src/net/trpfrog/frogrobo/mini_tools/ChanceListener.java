@@ -9,8 +9,7 @@ public class ChanceListener extends MentionListenerPlus {
 
 	@Override
 	public String getCommandName() { return "Chance"; }
-	@Override
-	public String getShortCommand() { return "chns"; }
+
 	@Override
 	public String getCommandUsage() { return this.getCommandLowerCase(); }
 	@Override
@@ -48,7 +47,7 @@ public class ChanceListener extends MentionListenerPlus {
 	}
 
 	@Override
-	public void mention(Status status) {
+	public void whenMentioned(Status status) {
 	}
 
 }

@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
+import net.trpfrog.frogrobo.streaming.MentionListener;
 import org.apache.commons.lang3.SystemUtils;
 
 import net.trpfrog.frogrobo.FrogRobo;
@@ -22,14 +23,13 @@ public class AutoReply extends MentionListenerPlus{
 	private static List<String> replyList = new ArrayList<>();
 
 	@Override
-	public void mention(Status status) {
+	public void whenMentioned(Status status) {
 	}
 
 
 	@Override
 	public String getCommandName() { return ""; }
-	@Override
-	public String getShortCommand() { return ""; }
+
 	@Override
 	public String getCommandUsage() {return "";}
 	@Override
@@ -45,7 +45,7 @@ public class AutoReply extends MentionListenerPlus{
 		if(replyList.size() == 0){
 			final String FS = SystemUtils.FILE_SEPARATOR;
 			StringBuilder path = new StringBuilder();
-			path.append(FrogRobo.FILE_PASS);
+			path.append(FrogRobo.FILE_PATH);
 			path.append("Files");
 			path.append(FS);
 			path.append("AutoReply.txt");
@@ -59,7 +59,7 @@ public class AutoReply extends MentionListenerPlus{
 		if(commands[1].matches("^[0-9]+$")){
 			commands[2] = commands[1];
 			commands[1] = "hab";
-			new HitAndBlowListener().reply(status, commands);
+			new HitAndBlowListener().whenReplied(status, commands);
 			return;
 		}
 
@@ -71,12 +71,12 @@ public class AutoReply extends MentionListenerPlus{
 		}
 		//------[返信内容の選定(乱数)------//
 		Random random = new Random(System.currentTimeMillis());
-		boolean success = true;
+		boolean success;
 		do{
 			success = true;
 			int num = random.nextInt(replyList.size());
 			try{
-				ToolsLoader.reply(replyList.get(num), status, false);
+				MentionListenerPlus.reply(replyList.get(num), status, false);
 			}catch (IllegalArgumentException e){
 				num = random.nextInt(replyList.size());
 				success = false;

@@ -1,5 +1,6 @@
 package net.trpfrog.frogrobo;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
@@ -9,23 +10,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-import org.apache.commons.lang3.SystemUtils;
-
 import net.trpfrog.frogrobo.streaming.MentionListener;
 import net.trpfrog.frogrobo.streaming.TweetStream;
 
 public class ListenerLoader {
 
 	public static void load() {
-		final String FS = SystemUtils.FILE_SEPARATOR;
+		final String FS = File.separator;
 		StringBuilder path = new StringBuilder();
-		path.append(FrogRobo.FILE_PASS);
+		path.append(FrogRobo.FILE_PATH);
 		path.append("Files");
 		path.append(FS);
 		path.append("ListenerLoader.txt");
 
 		List<String> newListenerFQCN = new ArrayList<>();
-		try (Stream<String> listenerFQCN = Files.lines(Paths.get(path.toString()));){
+		try (Stream<String> listenerFQCN = Files.lines(Paths.get(path.toString()))){
 			listenerFQCN.forEach(listenerClassName -> {
 				try {
 					Class<?> listener = Class.forName(listenerClassName);
@@ -46,7 +45,7 @@ public class ListenerLoader {
 				}
 			});
 
-			final String BR = SystemUtils.LINE_SEPARATOR;
+			final String BR = System.lineSeparator();
 
 			try(Writer fw = new FileWriter(path.toString())){
 

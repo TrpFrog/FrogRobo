@@ -11,11 +11,8 @@ public class ToHiraganaListener extends MentionListenerPlus{
 
 	@Override
 	public String getCommandName() {
-		return "toHiragana";
+		return "to_hiragana";
 	}
-
-	@Override
-	public String getShortCommand() { return "hrgn"; }
 
 	@Override
 	public String getCommandUsage() {
@@ -65,7 +62,7 @@ public class ToHiraganaListener extends MentionListenerPlus{
 	}
 
 	@Override
-	public void mention(Status status) {
+	public void whenMentioned(Status status) {
 	}
 }
 

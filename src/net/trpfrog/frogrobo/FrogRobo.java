@@ -1,8 +1,10 @@
 package net.trpfrog.frogrobo;
 
+import java.io.File;
 import java.util.ArrayList;
-
-import org.apache.commons.lang3.SystemUtils;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 //import javafx.application.Application;
 //import javafx.geometry.Orientation;
@@ -19,19 +21,30 @@ import net.trpfrog.frogrobo.streaming.MentionListener;
 import net.trpfrog.frogrobo.streaming.StreamingLoader;
 import net.trpfrog.frogrobo.streaming.TrpFrogUserStream;
 import net.trpfrog.frogrobo.streaming.TweetStream;
+import net.trpfrog.frogrobo.update_name.UpdateNamerSetter;
 
 
 public class FrogRobo /*extends Application*/ {
 
-	public static final String FS = SystemUtils.FILE_SEPARATOR;
-	public static String FILE_PASS =
-			//"home"+FS+"pi"+FS+"Desktop"+FS+"TwitterBot"+FS
-			"."+FS
-			;
+	public static final String FS = File.separator;
+	private static String jarPath = System.getProperty("java.class.path");
+	public static final String FILE_PATH = getFilePath();
+
+	private static String getFilePath(){
+		if (System.getProperty("os.name").equals("Mac OS X")){
+			return "."+FS;
+		}else{
+			return jarPath.substring(0, jarPath.lastIndexOf(File.separator)+1);
+		}
+	}
+
+
+
+	public static final int TRPFROG_USER_ID = 92482871;
 
 	public static void main(String[] args){
 		//Copycat.main();
-		//UpdateNamer.main();
+		UpdateNamerSetter.main();
 		//Spoofing.main(); //なりすまし
 
 
@@ -39,12 +52,19 @@ public class FrogRobo /*extends Application*/ {
 
 		StreamingLoader.start();
 
-		ArrayList<MentionListener> listenerList = new ArrayList<>();
-		listenerList.addAll(TweetStream.getInstance().getMentionListenerList());
+		Map<String,MentionListener> listenerMap = new HashMap<>();
+		List<MentionListener> listenerList = new ArrayList<>();
+
+		listenerMap.putAll(TweetStream.getInstance().getMentionListenerMap());
+		//リスナーリスからにつまみロボ用のリスナーを取得
+
 		listenerList.addAll(TrpFrogUserStream.getInstance().getListenerList());
+		//リスナーリストからつまみ(本垢)用のリスナーを取得
+
 		for (MentionListener listener : listenerList) {
-			System.out.println("☆"+listener.getCommandName()+" ("+listener.getShortCommand()+")");
+			System.out.println("☆"+listener.getCommandName());
 		}
+		listenerMap.forEach((k,v)-> System.out.println("☆"+k));
 		MainFrame.createFrame();
 		//launch(args);
 

@@ -118,8 +118,6 @@ class CountdownLoadListener extends MentionListenerPlus {
 		return null;
 	}
 
-	@Override
-	public String getShortCommand() { return "ctdw"; }
 
 	@Override
 	public String getCommandUsage() {
@@ -141,7 +139,7 @@ class CountdownLoadListener extends MentionListenerPlus {
 	}
 
 	@Override
-	public void mention(Status status) {
+	public void whenMentioned(Status status) {
 	}
 
 }

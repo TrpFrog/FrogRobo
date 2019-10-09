@@ -11,9 +11,6 @@ public class RebootListener extends MentionListenerPlus {
 	}
 
 	@Override
-	public String getShortCommand() { return null; }
-
-	@Override
 	public String getCommandUsage() {
 		return null;
 	}
@@ -33,7 +30,7 @@ public class RebootListener extends MentionListenerPlus {
 	}
 
 	@Override
-	public void mention(Status status) {
+	public void whenMentioned(Status status) {
 	}
 
 }

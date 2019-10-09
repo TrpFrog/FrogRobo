@@ -15,8 +15,6 @@ public class HelpListener extends MentionListenerPlus {
 	public String getCommandName() {
 		return "Help";
 	}
-	@Override
-	public String getShortCommand() { return ""; }
 
 	@Override
 	public String getCommandUsage() {
@@ -56,7 +54,7 @@ public class HelpListener extends MentionListenerPlus {
 	}
 
 	@Override
-	public void mention(Status status) {
+	public void whenMentioned(Status status) {
 
 	}
 

@@ -10,8 +10,7 @@ public class SunrisetListener extends MentionListenerPlus {
 
 	@Override
 	public String getCommandName() { return "sunriset"; }
-	@Override
-	public String getShortCommand() { return "sun"; }
+
 	@Override
 	public String getCommandUsage() { return this.getCommandLowerCase()+" [地名]"; }
 	@Override
@@ -84,7 +83,7 @@ public class SunrisetListener extends MentionListenerPlus {
 	}
 
 	@Override
-	public void mention(Status status) {
+	public void whenMentioned(Status status) {
 	}
 
 

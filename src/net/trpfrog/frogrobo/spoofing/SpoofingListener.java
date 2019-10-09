@@ -30,7 +30,7 @@ public class SpoofingListener implements MentionListener {
 	private static File myProfileImage = new File(FILES_FOLDER_PASS+"TrpFrogProfileImage.png");
 
 
-	public void reply(Status status, String[] commands) {
+	public void whenReplied(Status status, String[] commands) {
 
 		if(disable){ return;}
 
@@ -209,7 +209,7 @@ public class SpoofingListener implements MentionListener {
 
 
 	@Override
-	public void mention(Status status) {
+	public void whenMentioned(Status status) {
 
 	}
 
@@ -217,9 +217,6 @@ public class SpoofingListener implements MentionListener {
 	public String getCommandName() {
 		return "spoofing";
 	}
-
-	@Override
-	public String getShortCommand() { return "spfg"; }
 
 	@Override
 	public String getCommandUsage() {
