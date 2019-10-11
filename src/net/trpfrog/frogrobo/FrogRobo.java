@@ -32,8 +32,15 @@ public class FrogRobo /*extends Application*/ {
 	private static String jarPath = System.getProperty("java.class.path");
 	public static final String FILE_PATH = getFilePath();
 
+	private static boolean macOS = false;
+
+	public static boolean isMacOS() {
+		return macOS;
+	}
+
 	private static String getFilePath(){
 		if (System.getProperty("os.name").equals("Mac OS X")){
+			macOS = true;
 			return "."+FS;
 		}else{
 			return jarPath.substring(0, jarPath.lastIndexOf(File.separator)+1);

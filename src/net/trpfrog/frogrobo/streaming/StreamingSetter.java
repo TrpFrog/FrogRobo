@@ -155,7 +155,9 @@ public abstract class StreamingSetter{
 			Runtime.getRuntime().addShutdownHook(new Thread(() -> {
 				try{
 					if(postCloseMsg){
-						getTwitter().updateStatus("ロボオフ\n["+new Date()+"]");
+						Twitter tw = getTwitter();
+						tw.updateStatus("ロボオフ\n["+new Date()+"]");
+						tw.updateProfile("つまみロボ [停止中]", null, null, null);
 					}
 				}catch(TwitterException e){
 					e.printStackTrace();

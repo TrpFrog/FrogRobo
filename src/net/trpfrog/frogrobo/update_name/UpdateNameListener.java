@@ -6,8 +6,6 @@ import twitter4j.Status;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 
-import java.io.IOException;
-
 
 public class UpdateNameListener extends MentionListenerPlus {
     @Override
@@ -37,12 +35,15 @@ public class UpdateNameListener extends MentionListenerPlus {
     final byte NAME_LENGTH_MAX = 50;
     final byte NAME_LENGTH_MIN = 1;
 
+
     @Override
     public void doWhenReceiveCommand(Status status, String[] commands) {
         final String BR = "\n";
 
-        String name = status.getText().replaceAll("^"+commands[0]+" "+commands[1], ""); //match -> delete
-        name = name.trim();
+        String name = status.getText();
+        int start = name.toLowerCase().indexOf("update_name")+11; //初めのupdate_nameのすぐ後ろをさす
+        name = name.substring(start);
+        name = name.strip();
         name = name.replaceAll(BR, "");
 
         if (name.length() < NAME_LENGTH_MIN) {
@@ -109,8 +110,6 @@ public class UpdateNameListener extends MentionListenerPlus {
         myAccount.updateProfile(name, null, null, null);
         myAccount.updateStatus(sb.toString());
     }
-
-
 
 
 }
