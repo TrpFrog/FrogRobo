@@ -43,7 +43,7 @@ public class AnagramListener extends MentionListenerPlus {
 			sb.append(System.lineSeparator());
 		}
 
-		ToolsLoader.reply(sb.toString(), status, false);
+		MentionListenerPlus.reply(sb.toString(), status, false);
 	}
 
 	@Override

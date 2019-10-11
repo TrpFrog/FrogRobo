@@ -27,9 +27,19 @@ public class TrpFrogUserStream extends CommandStreaming{
 		super.applyStream();
 	}
 
-	public static TrpFrogUserStream getInstance() throws IOException, TwitterException {
+	public static TrpFrogUserStream getInstance(){
 		if(trpfrog==null){
-			trpfrog = new TrpFrogUserStream();
+			try {
+				trpfrog = new TrpFrogUserStream();
+			} catch (IOException e) {
+				System.err.println("TrpFrogUserStreamインスタンスの取得に失敗しました(IO)");
+				e.printStackTrace();
+				System.exit(1);
+			} catch (TwitterException e) {
+				System.err.println("TrpFrogUserStreamインスタンスの取得に失敗しました");
+				e.printStackTrace();
+				System.exit(1);
+			}
 		}
 		return trpfrog;
 	}

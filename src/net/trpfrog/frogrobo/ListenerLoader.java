@@ -29,13 +29,13 @@ public class ListenerLoader {
 				try {
 					Class<?> listener = Class.forName(listenerClassName);
 
-					if(listener.getSuperclass().getInterfaces()[0]==MentionListener.class||
-					   listener.getSuperclass()==MentionListener.class){
+					if(listener.getSuperclass().getInterfaces()[0]==MentionListener.class|| listener.getSuperclass()==MentionListener.class){
 						try {
-							TweetStream.getInstance().addMentionListener((MentionListener)listener.newInstance());
+							MentionListener l = (MentionListener)listener.getDeclaredConstructor().newInstance();
+							TweetStream.getInstance().addMentionListener(l);
 							newListenerFQCN.add(listener.getName());
 						} catch (Exception e) {
-							//そういうこともあるさ
+							e.printStackTrace();
 						}
 					}else{
 						newListenerFQCN.add("");

@@ -25,10 +25,10 @@ public class PlzFavMeListener extends MentionListenerPlus{
 				try {
 					TweetStream.getInstance().getTwitter().createFavorite(tweetId);
 				} catch (TwitterException e) {
-					ToolsLoader.reply("ふぁぼれませんでした", status, true);
+					MentionListenerPlus.reply("ふぁぼれませんでした", status, true);
 					return;
 				}
-				ToolsLoader.reply("ID:"+tweetId+"のツイートをふぁぼりました", status, true);
+				MentionListenerPlus.reply("ID:"+tweetId+"のツイートをふぁぼりました", status, true);
 			}
 		}
 		try {

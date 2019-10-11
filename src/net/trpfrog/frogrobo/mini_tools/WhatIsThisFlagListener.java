@@ -45,8 +45,7 @@ public class WhatIsThisFlagListener extends MentionListenerPlus{
 			sb.append(": ");
 			sb.appendln(name);
 		});
-
-		ToolsLoader.reply(sb.toString(), status, false);
+		MentionListenerPlus.reply(sb.toString(), status, false);
 	}
 
 	@Override

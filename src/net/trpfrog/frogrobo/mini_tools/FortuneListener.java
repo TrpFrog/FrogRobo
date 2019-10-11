@@ -100,7 +100,7 @@ public class FortuneListener extends MentionListenerPlus {
 			msg = sb.toString();
 		}
 
-		ToolsLoader.reply(msg, status, false);
+		MentionListenerPlus.reply(msg, status, false);
 	}
 
 	@Override

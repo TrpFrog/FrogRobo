@@ -16,3 +16,7 @@ net.trpfrog.frogrobo.mini_tools.WhatIsThisFlagListener
 net.trpfrog.frogrobo.hit_and_blow.HitAndBlowListener
 net.trpfrog.frogrobo.settings.ShutdownListener
 net.trpfrog.frogrobo.mini_tools.SystemInfoListener
+net.trpfrog.frogrobo.settings.BlackListListener
+net.trpfrog.frogrobo.settings.UnbanListener
+net.trpfrog.frogrobo.update_name.NGWordListener
+net.trpfrog.frogrobo.update_name.RemoveNGListener

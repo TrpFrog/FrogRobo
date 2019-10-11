@@ -6,7 +6,76 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38c2c321-a085-48c9-83d3-3229fb2ad759" name="Default Changelist" comment="" />
+    <list default="true" id="38c2c321-a085-48c9-83d3-3229fb2ad759" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Files/BannedList.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Files/NGnameList.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/settings/UnbanListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/NGWordListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/RemoveNGListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Files/ListenerLoader.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Files/ListenerLoader.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/FrogRobo.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/FrogRobo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/ListenerLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/ListenerLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/autoreply/AutoReply.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/autoreply/AutoReply.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/help/HelpListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/help/HelpListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/hit_and_blow/HitAndBlowListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/hit_and_blow/HitAndBlowListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/mini_tools/AnagramListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/mini_tools/AnagramListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/mini_tools/ChanceListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/mini_tools/ChanceListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/mini_tools/FlagsTransrater.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/mini_tools/FlagsTransrater.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/mini_tools/FortuneListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/mini_tools/FortuneListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/mini_tools/PingListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/mini_tools/PingListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/mini_tools/PlzFavMeListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/mini_tools/PlzFavMeListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/mini_tools/TranslateBoxLangListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/mini_tools/TranslateBoxLangListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/mini_tools/TransposeListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/mini_tools/TransposeListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/mini_tools/WhatIsThisFlagListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/mini_tools/WhatIsThisFlagListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/settings/BlackListListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/settings/BlackListListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/settings/ShutdownListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/settings/ShutdownListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/streaming/MentionListenerPlus.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/streaming/MentionListenerPlus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/streaming/StreamingLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/streaming/StreamingLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/streaming/StreamingSetter.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/streaming/StreamingSetter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/streaming/TrpFrogUserStream$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/streaming/TrpFrogUserStream$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/streaming/TrpFrogUserStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/streaming/TrpFrogUserStream.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/streaming/TweetStream$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/streaming/TweetStream$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/streaming/TweetStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/streaming/TweetStream.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/text_analysis/AnalysisListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/text_analysis/AnalysisListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/text_analysis/StringCutterListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/text_analysis/StringCutterListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/text_analysis/ToHiraganaListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/text_analysis/ToHiraganaListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/update_name/NameCheckThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/update_name/NameCheckThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/update_name/NameRestorer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/update_name/NameRestorer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/update_name/UpdateNameListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/update_name/UpdateNameListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/update_name/UpdateNamerSetter.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/update_name/UpdateNamerSetter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/weather/SunrisetListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/weather/SunrisetListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/weather/WeatherListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/net/trpfrog/frogrobo/weather/WeatherListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/FrogRobo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/FrogRobo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/ListenerLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/ListenerLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/help/HelpListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/help/HelpListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/hit_and_blow/HitAndBlowListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/hit_and_blow/HitAndBlowListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/AnagramListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/AnagramListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/ChanceListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/ChanceListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/FortuneListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/FortuneListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/PingListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/PingListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/PlzFavMeListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/PlzFavMeListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/TranslateBoxLangListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/TranslateBoxLangListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/TransposeListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/TransposeListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/WhatIsThisFlagListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/WhatIsThisFlagListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/settings/BlackListListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/settings/BlackListListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/settings/ShutdownListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/settings/ShutdownListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/CommandStreaming.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/CommandStreaming.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/MentionListenerPlus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/MentionListenerPlus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/StreamingLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/StreamingLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/StreamingSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/StreamingSetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/TrpFrogUserStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/TrpFrogUserStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/TweetStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/TweetStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/text_analysis/AnalysisListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/text_analysis/AnalysisListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/text_analysis/StringCutterListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/text_analysis/StringCutterListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/text_analysis/ToHiraganaListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/text_analysis/ToHiraganaListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/NameRestorer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/NameRestorer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/UpdateNameListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/UpdateNameListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/UpdateNamerSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/UpdateNamerSetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/weather/SunrisetListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/weather/SunrisetListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/weather/WeatherListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/trpfrog/frogrobo/weather/WeatherListener.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,19 +90,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/TweetStream.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/CommandStreaming.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2750">
-              <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
+            <state relative-caret-position="718">
+              <caret line="157" column="83" lean-forward="true" selection-start-line="157" selection-start-column="83" selection-end-line="157" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,50 +102,73 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/FrogRobo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitattributes">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/StreamingSetter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2706">
-              <caret line="133" column="31" lean-forward="true" selection-start-line="133" selection-start-column="31" selection-end-line="133" selection-end-column="31" />
+            <state relative-caret-position="356">
+              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
               <folding>
-                <element signature="e#1069#1070#0" expanded="true" />
-                <element signature="e#1100#1101#0" expanded="true" />
-                <element signature="e#3171#3172#0" expanded="true" />
-                <element signature="e#3252#3253#0" expanded="true" />
-                <element signature="e#3665#3666#0" expanded="true" />
-                <element signature="e#3694#3695#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/TrpFrogUserStream.java">
+        <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/UpdateNameListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1364">
-              <caret line="76" column="15" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="15" />
+            <state relative-caret-position="139">
+              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/StreamingLoader.java">
+        <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/NGWordListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+            <state relative-caret-position="660">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+              <folding>
+                <element signature="e#1034#1035#0" expanded="true" />
+                <element signature="e#1054#1055#0" expanded="true" />
+                <element signature="e#1682#1683#0" expanded="true" />
+                <element signature="e#1760#1761#0" expanded="true" />
+                <element signature="e#1855#1856#0" expanded="true" />
+                <element signature="e#1937#1938#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Files/ListenerLoader.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Files/NGnameList.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/RemoveNGListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="740">
+              <caret line="60" column="5" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+              <folding>
+                <element signature="e#936#937#0" expanded="true" />
+                <element signature="e#954#955#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,33 +176,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/settings/ShutdownListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-              <folding>
-                <element signature="e#485#486#0" expanded="true" />
-                <element signature="e#521#522#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Files/BannedList.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/MentionListenerPlus.java">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1628">
-              <caret line="82" column="67" selection-start-line="82" selection-start-column="67" selection-end-line="82" selection-end-column="67" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/MentionListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            <state relative-caret-position="176">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -133,57 +209,63 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/ListenerLoader.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/StreamListener.java" />
-        <option value="$PROJECT_DIR$/SecretFiles/TrpFrogAPIKeys.txt" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/UpdateNamer.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/Tools.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/ToolsLoader.java" />
         <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/hit_and_blow/HitAndBlowMessageFactory.java" />
         <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/OldUpdateNameListener.java" />
         <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/TimeCheckThread.java" />
         <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/NameCheckThread.java" />
         <option value="$PROJECT_DIR$/Files/update_name.txt" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/NameRestorer.java" />
         <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/playground/Playground1.java" />
         <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/MentionListener.java" />
         <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/SystemInfoListener.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/PingListener.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/AnagramListener.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/ChanceListener.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/FortuneListener.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/ToBinaryListener.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/reboot/RebootListener.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/countdown/Countdown.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/MainFrame.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/autoreply/AutoReply.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/StreamingSetter.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/TrpFrogUserStream.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/weather/WeatherListener.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/weather/SunrisetListener.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/text_analysis/ToHiraganaListener.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/text_analysis/StringCutterListener.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/text_analysis/AnalysisListener.java" />
         <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/WhatIsThisFlagListener.java" />
         <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/TransposeListener.java" />
         <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/TranslateBoxLangListener.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/ToBinaryListener.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/AnagramListener.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/ChanceListener.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/FortuneListener.java" />
         <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/PlzFavMeListener.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/UpdateNamerSetter.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/UpdateNameListener.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/weather/SunrisetListener.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/weather/WeatherListener.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/text_analysis/AnalysisListener.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/text_analysis/StringCutterListener.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/text_analysis/ToHiraganaListener.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/spoofing/SpoofingListener.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/settings/ShutdownListener.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/settings/BlackListListener.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/reboot/RebootListener.java" />
         <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/hit_and_blow/HitAndBlowListener.java" />
         <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/help/HelpListener.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/countdown/Countdown.java" />
-        <option value="$PROJECT_DIR$/Files/ListenerLoader.txt" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/MainFrame.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/FrogRobo.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/UpdateNamerSetter.java" />
         <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/StreamingLoader.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/autoreply/AutoReply.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/MentionListenerPlus.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/StreamingSetter.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/spoofing/SpoofingListener.java" />
         <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/TweetStream.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/FrogRobo.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/ListenerLoader.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/PingListener.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/MentionListenerPlus.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/settings/ShutdownListener.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/NameRestorer.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/settings/UnbanListener.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/settings/BlackListListener.java" />
+        <option value="$PROJECT_DIR$/Files/BannedList.txt" />
         <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/CommandStreaming.java" />
-        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/TrpFrogUserStream.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/UnbanListener.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/BlackListListener.java" />
+        <option value="$PROJECT_DIR$/Files/ListenerLoader.txt" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/NGWordListener.java" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/RemoveNGListener.java" />
+        <option value="$PROJECT_DIR$/Files/NGnameList.txt" />
+        <option value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/UpdateNameListener.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -207,6 +289,11 @@
               <item name="FrogRobo" type="b2602c69:ProjectViewProjectNode" />
               <item name="FrogRobo" type="462c0819:PsiDirectoryNode" />
               <item name="Files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FrogRobo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FrogRobo" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FrogRobo" type="b2602c69:ProjectViewProjectNode" />
@@ -287,6 +374,13 @@
               <item name="FrogRobo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="frogrobo" type="462c0819:PsiDirectoryNode" />
+              <item name="spoofing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FrogRobo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FrogRobo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="frogrobo" type="462c0819:PsiDirectoryNode" />
               <item name="streaming" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -298,17 +392,26 @@
             </path>
             <path>
               <item name="FrogRobo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FrogRobo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="frogrobo" type="462c0819:PsiDirectoryNode" />
+              <item name="update_name" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FrogRobo" type="b2602c69:ProjectViewProjectNode" />
               <item name="外部ライブラリー" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -316,8 +419,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="net.trpfrog.frogrobo.mini_tools" />
       <recent name="net.trpfrog.frogrobo.settings" />
+      <recent name="net.trpfrog.frogrobo.mini_tools" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -346,12 +452,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NameRestorer" type="Application" factoryName="アプリケーション" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="net.trpfrog.frogrobo.update_name.NameRestorer" />
+    <configuration name="ListenerLoader" type="Application" factoryName="アプリケーション" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="net.trpfrog.frogrobo.ListenerLoader" />
       <module name="FrogRobo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="net.trpfrog.frogrobo.update_name.*" />
+          <option name="PATTERN" value="net.trpfrog.frogrobo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -401,10 +507,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="アプリケーション.FrogRobo" />
+        <item itemvalue="アプリケーション.ListenerLoader" />
         <item itemvalue="アプリケーション.TweetStream" />
         <item itemvalue="アプリケーション.Playground1" />
         <item itemvalue="アプリケーション.SystemInfoListener" />
-        <item itemvalue="アプリケーション.NameRestorer" />
       </list>
     </recent_temporary>
   </component>
@@ -432,8 +538,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15448768" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15011914" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -442,8 +549,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962137" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4708798" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.17074981" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39940608" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32962137" />
@@ -460,318 +567,12 @@
       <window_info anchor="right" id="パレット" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15250199" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32962137" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2821084" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32962137" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32962137" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.19673347" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="パレット" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-    </layout-to-restore>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="・HashMapを用いたコマンド読み込み動作の見直し&#10;・ストリームの大体の流れを記述する抽象クラスCommandStreamingの追加&#10;・BAN、UNBAN機能の追加&#10;・update_nameにおける禁止ワードの追加&#10;・禁止ワードの追加と削除を行うコマンドの追加&#10;・shutdownコマンドの追加&#10;・非推奨としたToolsLoader.replyの使用を中止" />
+    <option name="LAST_COMMIT_MESSAGE" value="・HashMapを用いたコマンド読み込み動作の見直し&#10;・ストリームの大体の流れを記述する抽象クラスCommandStreamingの追加&#10;・BAN、UNBAN機能の追加&#10;・update_nameにおける禁止ワードの追加&#10;・禁止ワードの追加と削除を行うコマンドの追加&#10;・shutdownコマンドの追加&#10;・非推奨としたToolsLoader.replyの使用を中止" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/Tools.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/Variables.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/NameCheckThread.java" />
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/reminder/Remind.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-526">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/reminder/RemindChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Files/update_name.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/NameRestorer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="41" lean-forward="true" selection-start-column="41" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#530#531#0" expanded="true" />
-            <element signature="e#564#565#0" expanded="true" />
-            <element signature="e#1126#1127#0" expanded="true" />
-            <element signature="e#1160#1161#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/ListenerLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="35" column="67" selection-start-line="35" selection-start-column="67" selection-end-line="35" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/spoofing/Spoofing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/StreamListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/WhatIsThisFlagListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/OldUpdateNameListener.java" />
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/UpdateNamerSetter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding>
-            <element signature="e#160#161#0" expanded="true" />
-            <element signature="e#236#237#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/UpdateNameListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/weather/SunrisetListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/weather/WeatherListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/text_analysis/AnalysisListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/text_analysis/ToHiraganaListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/text_analysis/StringCutterListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-376">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/spoofing/SpoofingListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="219" selection-start-line="219" selection-end-line="219" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/settings/BlackListListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Files/ListenerLoader.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="46" selection-start-column="46" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/playground/Playground1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/MainFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1034">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/hit_and_blow/HitAndBlowListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/help/HelpListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/countdown/Countdown.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1256">
-          <caret line="119" selection-start-line="119" selection-end-line="119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/autoreply/AutoReply.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="86" lean-forward="true" selection-start-line="85" selection-start-column="1" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/FrogRobo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/TransposeListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/TranslateBoxLangListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/ToolsLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/ToBinaryListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/SystemInfoListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="31" />
-          <folding>
-            <element signature="e#284#285#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/PlzFavMeListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/FortuneListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/PingListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/ChanceListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/AnagramListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/reboot/RebootListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -786,30 +587,233 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/StreamingLoader.java">
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/CountdownList.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/TrpFrogProfileImage.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/TrpFrogProfileImage.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/TmmPay.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/update_name.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+        <state relative-caret-position="44">
+          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/settings/ShutdownListener.java">
+    <entry file="file://$PROJECT_DIR$/Files/defaultProfile.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/HitAndBlowPlayers.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/SpoofingImage.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/TrpFrogProfile.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/ToolsLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="704">
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/weather/WeatherListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="724">
+          <caret line="112" column="1" lean-forward="true" selection-start-line="112" selection-start-column="1" selection-end-line="112" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/weather/SunrisetListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="81" column="27" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/text_analysis/ToHiraganaListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/text_analysis/StringCutterListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="710">
+          <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/text_analysis/AnalysisListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/WhatIsThisFlagListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/TransposeListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/TranslateBoxLangListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="60" column="31" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/AnagramListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/ChanceListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/FortuneListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="102" column="27" selection-start-line="102" selection-start-column="27" selection-end-line="102" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/PlzFavMeListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/hit_and_blow/HitAndBlowListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/help/HelpListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="946">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/StreamingLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
           <folding>
-            <element signature="e#485#486#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/spoofing/SpoofingListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="21" column="84" selection-start-line="21" selection-start-column="84" selection-end-line="21" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/TweetStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-228">
+          <caret line="46" column="28" lean-forward="true" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/mini_tools/PingListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/StreamingSetter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/MentionListenerPlus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1628">
-          <caret line="82" column="67" selection-start-line="82" selection-start-column="67" selection-end-line="82" selection-end-column="67" />
+        <state relative-caret-position="1445">
+          <caret line="75" column="25" lean-forward="true" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/ListenerLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/TrpFrogUserStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-343">
+          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/NameRestorer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="51" column="98" lean-forward="true" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/Tools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="29" lean-forward="true" selection-start-column="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/UpdateNamerSetter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="85" lean-forward="true" selection-start-line="9" selection-start-column="85" selection-end-line="9" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#224#225#0" expanded="true" />
+            <element signature="e#307#308#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -821,54 +825,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/TweetStream.java">
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/settings/BlackListListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/TrpFrogUserStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
-          <caret line="76" column="15" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/StreamingSetter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2706">
-          <caret line="133" column="31" lean-forward="true" selection-start-line="133" selection-start-column="31" selection-end-line="133" selection-end-column="31" />
+        <state relative-caret-position="850">
+          <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
           <folding>
-            <element signature="e#1069#1070#0" expanded="true" />
-            <element signature="e#1100#1101#0" expanded="true" />
-            <element signature="e#3171#3172#0" expanded="true" />
-            <element signature="e#3252#3253#0" expanded="true" />
-            <element signature="e#3665#3666#0" expanded="true" />
-            <element signature="e#3694#3695#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#803#804#0" expanded="true" />
+            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#890#891#0" expanded="true" />
+            <element signature="e#938#939#0" expanded="true" />
+            <element signature="e#1767#1768#0" expanded="true" />
+            <element signature="e#1842#1843#0" expanded="true" />
+            <element signature="e#1933#1934#0" expanded="true" />
+            <element signature="e#2015#2016#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/CommandStreaming.java">
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/settings/UnbanListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2750">
-          <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
+        <state relative-caret-position="815">
+          <caret line="66" column="49" lean-forward="true" selection-start-line="66" selection-start-column="49" selection-end-line="66" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/settings/ShutdownListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
+          <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/streaming/CommandStreaming.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="718">
+          <caret line="157" column="83" lean-forward="true" selection-start-line="157" selection-start-column="83" selection-end-line="157" selection-end-column="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/RemoveNGListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="740">
+          <caret line="60" column="5" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+          <folding>
+            <element signature="e#936#937#0" expanded="true" />
+            <element signature="e#954#955#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/ListenerLoader.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/NGnameList.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/UpdateNameListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/FrogRobo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/trpfrog/frogrobo/update_name/NGWordListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="e#1034#1035#0" expanded="true" />
+            <element signature="e#1054#1055#0" expanded="true" />
+            <element signature="e#1682#1683#0" expanded="true" />
+            <element signature="e#1760#1761#0" expanded="true" />
+            <element signature="e#1855#1856#0" expanded="true" />
+            <element signature="e#1937#1938#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/BannedList.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

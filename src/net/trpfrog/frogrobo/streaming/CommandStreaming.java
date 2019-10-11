@@ -2,9 +2,11 @@ package net.trpfrog.frogrobo.streaming;
 
 import net.trpfrog.frogrobo.FrogRobo;
 import net.trpfrog.frogrobo.autoreply.AutoReply;
+import net.trpfrog.frogrobo.settings.BlackListListener;
 import twitter4j.Status;
 import twitter4j.TwitterException;
 
+import java.io.IOException;
 import java.util.*;
 import java.util.stream.Stream;
 
@@ -20,7 +22,9 @@ public abstract class CommandStreaming extends StreamingSetter{
         lowerScreenName = super.getTwitter().getScreenName().toLowerCase();
     }
 
-    CommandStreaming () throws TwitterException {
+    @Deprecated
+    CommandStreaming (String keyFileName) throws TwitterException, IOException {
+        this.setKey(keyFileReader(keyFileName), false);
         lowerScreenName = super.getTwitter().getScreenName().toLowerCase();
     }
 
@@ -142,15 +146,22 @@ public abstract class CommandStreaming extends StreamingSetter{
 
             if(REPLY){
                 String firstCmd = commands[1].trim().toLowerCase();
+                System.out.println("Input_command="+firstCmd); //TODO:あとで消す
                 if(mentionListenerMap.containsKey(firstCmd)) {
+
+                    if(BlackListListener.isBanned(status)){
+                        MentionListenerPlus.reply("BANされています！",status,true);
+                        return;
+                    }
+
                     MentionListener listener = mentionListenerMap.get(firstCmd);
-                    System.out.println("[cmd: " + firstCmd + "]");
+                    System.out.println("[cmd: " + listener.getCommandName() + "]");
                     listener.whenReplied(status, commands);
                 }else {
                     System.out.println("キーがありません！");
                     new AutoReply().doWhenReceiveCommand(status,commands);
                 }
-            }else {
+            }else{
                 //TODO: isMentionの処理を行う
             }
 

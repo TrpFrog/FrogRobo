@@ -1,5 +1,6 @@
 package net.trpfrog.frogrobo.streaming;
 
+import net.trpfrog.frogrobo.FrogRobo;
 import twitter4j.Status;
 import twitter4j.StatusUpdate;
 import twitter4j.TwitterException;
@@ -69,11 +70,15 @@ public abstract class MentionListenerPlus implements MentionListener {
 		return this.disable;
 	}
 
-	public static void reply(String tweet, Status inReplyTo, boolean dateTweet) {
-		final String SCREEN_NAME = "@" + inReplyTo.getUser().getScreenName() + " ";
+	public static void reply(String tweet, Status status, boolean dateTweet) {
+		System.out.println("into reply");
+		final String SCREEN_NAME = "@" + status.getUser().getScreenName() + " ";
 		String date = "";
 
-		if(TweetStream.FROGROBO_USER_ID==inReplyTo.getInReplyToUserId()) return;
+		if(TweetStream.FROGROBO_USER_ID==status.getUser().getId()){
+			System.out.println("自分には返信しません。");
+			return;
+		}
 
 		if (dateTweet == true) {
 			date = "\n[" + new Date() + "]";
@@ -97,13 +102,21 @@ public abstract class MentionListenerPlus implements MentionListener {
 			throw new IllegalArgumentException(sb.toString());
 		}
 
-		StatusUpdate reply = new StatusUpdate(replyMsg)
-				.inReplyToStatusId(inReplyTo.getId());
+		StatusUpdate reply = new StatusUpdate(replyMsg);
+		reply.inReplyToStatusId(status.getId());
 		try {
 			TweetStream.getInstance().getTwitter().updateStatus(reply);
 		} catch (TwitterException e) {
 			throw new IllegalArgumentException();
 		}
+	}
+
+	public static void errorReply(String error, Status status){
+		StringBuilder sb = new StringBuilder();
+		sb.append(error);
+		sb.append(System.lineSeparator());
+		sb.append("@TrpFrog");
+		reply(sb.toString(),status,true);
 	}
 
 }

@@ -66,7 +66,7 @@ public class TransposeListener extends MentionListenerPlus {
 		sb.append("への移調結果]\n");
 		sb.append(transpose(NOTES_TO_TRANSPOSE,numOfBefore,numOfAfter));
 
-		ToolsLoader.reply(sb.toString(),status,false);
+		MentionListenerPlus.reply(sb.toString(),status,false);
 	}
 
 	private String replaceFlatAndSharpToSymbol(String note){

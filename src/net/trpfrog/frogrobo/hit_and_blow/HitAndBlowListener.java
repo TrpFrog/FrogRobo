@@ -57,14 +57,14 @@ public class HitAndBlowListener extends MentionListenerPlus {
 				}
 			}
 			joinTheGame(userId, length);
-			ToolsLoader.reply("\nゲームを開始します", status, true);
+			MentionListenerPlus.reply("\nゲームを開始します", status, true);
 			break;
 
 		//---------------------------------------------------//
 		case "giveup":
 		case "end":
 			exitFromTheGame(status.getUser().getId());
-			ToolsLoader.reply("\nゲームを終了します", status, true);
+			MentionListenerPlus.reply("\nゲームを終了します", status, true);
 			break;
 
 		//---------------------------------------------------//
@@ -81,27 +81,27 @@ public class HitAndBlowListener extends MentionListenerPlus {
 
 	private boolean exceptionChecker(HitAndBlowPlayer player, String numberStr, Status status){
 		if(player == null){
-			ToolsLoader.reply("\nまだゲームが始まっていません", status, true);
+			MentionListenerPlus.reply("\nまだゲームが始まっていません", status, true);
 			return true;
 		}
 
 		if(numberStr.length()!=(player.getSolution()+"").length()){
-			ToolsLoader.reply("\n桁数が間違っています", status, true);
+			MentionListenerPlus.reply("\n桁数が間違っています", status, true);
 			return true;
 		}
 
 		if(tools.isAnswer(numberStr,player.getSolution())==false){
-			ToolsLoader.reply("\n数字で答えてください", status, true);
+			MentionListenerPlus.reply("\n数字で答えてください", status, true);
 			return true;
 		}
 
 		try {
 			if(tools.isRepeated(Integer.parseInt(numberStr))){
-				ToolsLoader.reply("\n数字が繰り返されています", status, true);
+				MentionListenerPlus.reply("\n数字が繰り返されています", status, true);
 				return true;
 			}
 		} catch (NumberFormatException e1) {
-			ToolsLoader.reply("\n数字が長過ぎます", status, true);
+			MentionListenerPlus.reply("\n数字が長過ぎます", status, true);
 			return true;
 		}
 		return false;
@@ -116,7 +116,7 @@ public class HitAndBlowListener extends MentionListenerPlus {
 			result =
 					tools.checkHitAndBlow(player.getSolution(), Integer.parseInt(numberStr));
 		} catch (NumberFormatException e) {
-			ToolsLoader.reply("\n数字で答えてください", status, true);
+			MentionListenerPlus.reply("\n数字で答えてください", status, true);
 		}
 
 		player.addTrials();
@@ -124,19 +124,19 @@ public class HitAndBlowListener extends MentionListenerPlus {
 		if((player.getSolution()+"").length()==result.getHit()){
 			String cleared = HitAndBlowMessageFactory.cleared(player);
 			exitFromTheGame(userId);
-			ToolsLoader.reply(cleared, status, false);
+			MentionListenerPlus.reply(cleared, status, false);
 			return;
 		}
 
 		if(player.getTrials()==10){
 			String failed = HitAndBlowMessageFactory.gameOver(player);
 			exitFromTheGame(userId);
-			ToolsLoader.reply(failed, status, false);
+			MentionListenerPlus.reply(failed, status, false);
 			return;
 		}
 
 		String progress = HitAndBlowMessageFactory.progress(player, result);
-		ToolsLoader.reply(progress, status, false);
+		MentionListenerPlus.reply(progress, status, false);
 	}
 
 	private static void loadPlayers(){

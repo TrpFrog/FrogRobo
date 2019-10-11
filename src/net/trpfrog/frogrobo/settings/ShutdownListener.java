@@ -7,6 +7,8 @@ import net.trpfrog.frogrobo.streaming.TrpFrogUserStream;
 import twitter4j.Status;
 import twitter4j.TwitterException;
 
+import java.io.IOException;
+
 public class ShutdownListener extends MentionListenerPlus {
 
 	@Override
@@ -32,18 +34,10 @@ public class ShutdownListener extends MentionListenerPlus {
 	@Override
 	public void doWhenReceiveCommand(Status status, String[] commands) {
 		if(status.getUser().getId() != FrogRobo.TRPFROG_USER_ID){
-			MentionListenerPlus.reply("アクセス権がありません。このコマンドは管理者のみが使用できます。",status,true);
+			MentionListenerPlus.reply("権限がありません！このコマンドは管理者のみが使用できます。",status,true);
 			return;
 		}
-		if(commands[2].equals("true")){
-			try {
-				TrpFrogUserStream.getInstance().getTwitter().destroyStatus(status.getId());
-			} catch (TwitterException e) {
-				MentionListenerPlus.reply("ツイ消しできませんでした。",status,true);
-			}
-		}else{
-			MentionListenerPlus.reply("シャットダウンします。",status,true);
-		}
+		MentionListenerPlus.reply("シャットダウンします。",status,true);
 		System.exit(0);
 	}
 

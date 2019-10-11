@@ -7,6 +7,7 @@ import net.trpfrog.frogrobo.streaming.MentionListener;
 import net.trpfrog.frogrobo.streaming.MentionListenerPlus;
 import net.trpfrog.frogrobo.streaming.TweetStream;
 import twitter4j.Status;
+import twitter4j.TwitterException;
 
 public class HelpListener extends MentionListenerPlus {
 
@@ -48,7 +49,7 @@ public class HelpListener extends MentionListenerPlus {
 				sb.append(msg);
 				sb.append("\n");
 			}
-			ToolsLoader.reply(sb.toString(), status, true);
+			MentionListenerPlus.reply(sb.toString(), status, true);
 			break;
 		}
 	}

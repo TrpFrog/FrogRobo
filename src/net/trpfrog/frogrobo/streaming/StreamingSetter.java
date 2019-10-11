@@ -23,6 +23,8 @@ public abstract class StreamingSetter{
 	protected boolean isUserStream = false;
 	protected boolean registeredShutdownHook = false;
 
+	private Twitter twitter;
+
 	protected TwitterStream stream = new TwitterStreamFactory(getBuilder().build()).getInstance();
 
 	StreamingSetter (String consumerKey, String consumerSecret, String accessToken, String accessTokenSecret){
@@ -83,8 +85,10 @@ public abstract class StreamingSetter{
 	 * @return Twitterインスタンス
 	 */
 	public final Twitter getTwitter(){
-		 Twitter twitter = new TwitterFactory(getBuilder().build()).getInstance();
-		 return twitter;
+		if(this.twitter == null){
+		 	this.twitter = new TwitterFactory(getBuilder().build()).getInstance();
+		}//TODO: バグったらここを見ろ
+		return twitter;
 	}
 
 
@@ -143,12 +147,16 @@ public abstract class StreamingSetter{
 	/**
 	 * ストリームを起動します。
 	 */
+	public boolean postCloseMsg = true;
+
 	public final void start(){
 		doing();
 		if(this.registeredShutdownHook==false){
 			Runtime.getRuntime().addShutdownHook(new Thread(() -> {
 				try{
-					getTwitter().updateStatus("ロボオフ\n["+new Date()+"]");
+					if(postCloseMsg){
+						getTwitter().updateStatus("ロボオフ\n["+new Date()+"]");
+					}
 				}catch(TwitterException e){
 					e.printStackTrace();
 				}

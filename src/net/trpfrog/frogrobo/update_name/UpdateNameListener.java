@@ -6,6 +6,8 @@ import twitter4j.Status;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 
+import java.io.IOException;
+
 
 public class UpdateNameListener extends MentionListenerPlus {
     @Override
@@ -31,6 +33,7 @@ public class UpdateNameListener extends MentionListenerPlus {
 
 
     protected static Twitter myAccount = TrpFrogUserStream.getInstance().getTwitter();
+
     final byte NAME_LENGTH_MAX = 50;
     final byte NAME_LENGTH_MIN = 1;
 
@@ -46,11 +49,18 @@ public class UpdateNameListener extends MentionListenerPlus {
 
             String msg = "名前が空欄だと改名できません！";
             reply(msg, status, true);
+            return;
 
         } else if (NAME_LENGTH_MAX < name.length())  {
 
             String msg = "名前が長過ぎます......"+NAME_LENGTH_MAX+"文字以下にしてください......";
             reply(msg, status, true);
+            return;
+
+        } else if (NGWordListener.isNG(name)){
+            String msg = "エラーが発生しました...";
+            reply(msg, status, true);
+            return;
 
         } else {
 

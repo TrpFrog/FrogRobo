@@ -43,7 +43,7 @@ public class SunrisetListener extends MentionListenerPlus {
 			try {
 				wp = new WeatherApi(lat, lon, 0);
 			} catch (APINetworkErrorException e) {
-				ToolsLoader.reply("お住まいの地域は対応していないか、位置情報機能がオフになっている可能性があります", status, true);
+				MentionListenerPlus.reply("お住まいの地域は対応していないか、位置情報機能がオフになっている可能性があります", status, true);
 				return;
 			}
 		}else{
@@ -51,7 +51,7 @@ public class SunrisetListener extends MentionListenerPlus {
 				wp = new WeatherApi(commands[LOCATION],0);
 				System.out.println(wp.getLocationName());
 			} catch (IllegalArgumentException | APINetworkErrorException e) {
-				ToolsLoader.reply("存在しない地名です", status, true);
+				MentionListenerPlus.reply("存在しない地名です", status, true);
 				return;
 			}
 		}
@@ -79,7 +79,7 @@ public class SunrisetListener extends MentionListenerPlus {
 		sb.append("日の入り: ");
 		sb.appendln(wp.getSunset());
 
-		ToolsLoader.reply(sb.toString(), status, true);
+		MentionListenerPlus.reply(sb.toString(), status, true);
 	}
 
 	@Override

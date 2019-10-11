@@ -43,7 +43,7 @@ public class ChanceListener extends MentionListenerPlus {
 
 		String probability = integer+"."+decimalStr+"％";
 
-		ToolsLoader.reply("\n"+text+"\n【"+probability+"】", status, false);
+		MentionListenerPlus.reply("\n"+text+"\n【"+probability+"】", status, false);
 	}
 
 	@Override

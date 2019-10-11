@@ -21,9 +21,19 @@ public class TweetStream extends CommandStreaming {
 
 	private static TweetStream frogrobo;
 
-	public static TweetStream getInstance() throws TwitterException {
+	public static TweetStream getInstance(){
 		if(frogrobo==null){
-			frogrobo = new TweetStream();
+			try {
+				frogrobo = new TweetStream();
+			} catch (TwitterException e) {
+				System.err.println("TweetStreamインスタンスの取得に失敗しました");
+				e.printStackTrace();
+				System.exit(1);
+			} catch (IOException e) {
+				System.err.println("TweetStreamインスタンスの取得に失敗しました(IO)");
+				e.printStackTrace();
+				System.exit(1);
+			}
 		}
 		return frogrobo;
 	}
@@ -32,13 +42,8 @@ public class TweetStream extends CommandStreaming {
 	private List<MentionListener> mentionListenerList = new ArrayList<>(); //追加はFrogRobo.javaでやっている...？
 
 
-	private TweetStream() throws TwitterException {
-		super();
-		try {
-			this.setKey(keyFileReader("FrogRoboAPIKeys.txt"), false);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	private TweetStream() throws TwitterException, IOException {
+		super(keyFileReader("FrogRoboAPIKeys.txt"));
 		super.applyStream();
 	}
 

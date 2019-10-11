@@ -35,18 +35,17 @@ public class NameRestorer {
     static NameCheckThread thread = new NameCheckThread();
 
     synchronized static void setLatestName(String name){
-        lastUpdateTime = System.currentTimeMillis();
-        lastUpdateName = name;
         if(isFirst){
             defaultSetting();
             thread.start();
         }
+        lastUpdateTime = System.currentTimeMillis();
+        lastUpdateName = name;
     }
 
     static void setDefaultName(String name){
         defaultName = name;
     }
-
 
     private static void defaultSetting(){
         readUpdateNameProperties();
@@ -111,7 +110,7 @@ class NameCheckThread extends Thread {
             } catch (TwitterException e) {
                 e.printStackTrace();
             }
-            is12HourPassed = System.currentTimeMillis() - NameRestorer.getLastUpdateTime() > 1000*60*60*12;
+            is12HourPassed = System.currentTimeMillis() - NameRestorer.getLastUpdateTime() > 1000*60*60*12; //12時間経過
             isRenamed = name.equals(NameRestorer.getLastUpdateName());
             isDefaultName = name.equals(NameRestorer.getDefaultName());
             if(is12HourPassed && isRenamed && !isDefaultName){

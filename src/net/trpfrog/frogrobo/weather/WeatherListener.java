@@ -1,5 +1,6 @@
 package net.trpfrog.frogrobo.weather;
 
+import net.trpfrog.frogrobo.streaming.MentionListener;
 import org.apache.commons.lang3.text.StrBuilder;
 
 import net.trpfrog.frogrobo.mini_tools.ToolsLoader;
@@ -102,7 +103,7 @@ public class WeatherListener extends MentionListenerPlus{
 		sb.appendln("℃");
 		sb.appendNewLine();
 
-		ToolsLoader.reply(sb.toString(), status, true);
+		MentionListenerPlus.reply(sb.toString(), status, true);
 	}
 
 	@Override

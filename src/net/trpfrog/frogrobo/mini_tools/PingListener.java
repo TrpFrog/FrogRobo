@@ -17,7 +17,8 @@ public class PingListener extends MentionListenerPlus{
 
 	@Override
 	public void doWhenReceiveCommand(Status status, String[] commands) {
-		ToolsLoader.reply("やっほー起きてるよ", status, true);
+		System.out.println("test");
+		MentionListenerPlus.reply("やっほー起きてるよ", status, true);
 	}
 
 	@Override

@@ -56,9 +56,9 @@ public class TranslateBoxLangListener extends MentionListenerPlus{
 			}
 		}
 		try{
-			ToolsLoader.reply(sb.toString(), status, false);
+			MentionListenerPlus.reply(sb.toString(), status, false);
 		}catch(IllegalArgumentException e){
-			ToolsLoader.reply("文字数を減らしてください", status, true);
+			MentionListenerPlus.reply("文字数を減らしてください", status, true);
 		}
 	}
 

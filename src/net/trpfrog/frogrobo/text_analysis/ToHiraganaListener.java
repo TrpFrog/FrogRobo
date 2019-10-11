@@ -38,7 +38,7 @@ public class ToHiraganaListener extends MentionListenerPlus{
 		try {
 			words = JapaneseAnalysis.morphological(text);
 		} catch (APINetworkErrorException e) {
-			ToolsLoader.reply(e.getMessage(), status, true);
+			MentionListenerPlus.reply(e.getMessage(), status, true);
 			return;
 		}
 
@@ -55,9 +55,9 @@ public class ToHiraganaListener extends MentionListenerPlus{
 		}
 
 		try{
-			ToolsLoader.reply(sb.toString(), status, false);
+			MentionListenerPlus.reply(sb.toString(), status, false);
 		}catch(IllegalArgumentException ex){
-			ToolsLoader.reply("文が長過ぎます", status, true);
+			MentionListenerPlus.reply("文が長過ぎます", status, true);
 		}
 	}
 

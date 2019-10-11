@@ -1,6 +1,7 @@
 package net.trpfrog.frogrobo;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -22,6 +23,7 @@ import net.trpfrog.frogrobo.streaming.StreamingLoader;
 import net.trpfrog.frogrobo.streaming.TrpFrogUserStream;
 import net.trpfrog.frogrobo.streaming.TweetStream;
 import net.trpfrog.frogrobo.update_name.UpdateNamerSetter;
+import twitter4j.TwitterException;
 
 
 public class FrogRobo /*extends Application*/ {
@@ -47,28 +49,18 @@ public class FrogRobo /*extends Application*/ {
 		UpdateNamerSetter.main();
 		//Spoofing.main(); //なりすまし
 
-
 		ListenerLoader.load();
 
 		StreamingLoader.start();
 
-		Map<String,MentionListener> listenerMap = new HashMap<>();
-		List<MentionListener> listenerList = new ArrayList<>();
 
-		listenerMap.putAll(TweetStream.getInstance().getMentionListenerMap());
-		//リスナーリスからにつまみロボ用のリスナーを取得
+		TweetStream.getInstance().getMentionListenerMap()
+				.forEach((k,v)-> System.out.println("☆"+k));
+		TrpFrogUserStream.getInstance().getMentionListenerMap()
+				.forEach((k,v)-> System.out.println("☆"+k));
 
-		listenerList.addAll(TrpFrogUserStream.getInstance().getListenerList());
-		//リスナーリストからつまみ(本垢)用のリスナーを取得
-
-		for (MentionListener listener : listenerList) {
-			System.out.println("☆"+listener.getCommandName());
-		}
-		listenerMap.forEach((k,v)-> System.out.println("☆"+k));
 		MainFrame.createFrame();
 		//launch(args);
-
-
 	}
 //	@Override
 //
