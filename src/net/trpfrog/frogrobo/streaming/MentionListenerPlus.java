@@ -71,11 +71,22 @@ public abstract class MentionListenerPlus implements MentionListener {
 	}
 
 	public static void reply(String tweet, Status status, boolean dateTweet) {
-		System.out.println("into reply");
-		final String SCREEN_NAME = "@" + status.getUser().getScreenName() + " ";
+		if(!FrogRobo.TEST_MODE) System.out.println("into reply");
+
+		final String SCREEN_NAME;
+		final long USER_ID;
+
+		if(FrogRobo.TEST_MODE){
+			SCREEN_NAME = "@TrpFrog";
+			USER_ID = 0;
+		}else{
+			SCREEN_NAME = "@" + status.getUser().getScreenName();
+			USER_ID = status.getUser().getId();
+		}
+
 		String date = "";
 
-		if(TweetStream.FROGROBO_USER_ID==status.getUser().getId()){
+		if(TweetStream.FROGROBO_USER_ID==USER_ID){
 			System.out.println("自分には返信しません。");
 			return;
 		}
@@ -85,7 +96,7 @@ public abstract class MentionListenerPlus implements MentionListener {
 		}
 		String replyMsg = SCREEN_NAME + tweet + date;
 
-		final int MAX_LENGTH = 140 - (SCREEN_NAME + date).length();
+		final int MAX_LENGTH = 140 - (SCREEN_NAME.length() + 1 + date.length());
 
 		if (tweet.length() >= MAX_LENGTH) {
 			StringBuilder sb = new StringBuilder();
@@ -100,6 +111,11 @@ public abstract class MentionListenerPlus implements MentionListener {
 			sb.append(tweet.length()-MAX_LENGTH);
 			sb.append("文字オーバーしています)");
 			throw new IllegalArgumentException(sb.toString());
+		}
+
+		if(FrogRobo.TEST_MODE){
+			System.out.println(tweet);
+			return;
 		}
 
 		StatusUpdate reply = new StatusUpdate(replyMsg);
