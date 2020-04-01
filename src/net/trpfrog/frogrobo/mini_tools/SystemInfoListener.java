@@ -11,7 +11,7 @@ public class SystemInfoListener extends MentionListenerPlus{
 	}
 
 	@Override
-	public String getCommandName() { return "system_info"; }
+	public String getCommandName() { return "sysinfo"; }
 
 	@Override
 	public String getCommandUsage() { return this.getCommandName(); }
