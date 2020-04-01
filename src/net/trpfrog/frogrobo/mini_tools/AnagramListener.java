@@ -1,5 +1,6 @@
 package net.trpfrog.frogrobo.mini_tools;
 
+import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
@@ -28,15 +29,26 @@ public class AnagramListener extends MentionListenerPlus {
 
 		StringBuilder sb = new StringBuilder();
 		sb.append(System.lineSeparator());
-		sb.append("【アナグラムしました(適当)】");
+		sb.append("【文字をシャッフルしました】");
 		sb.append(System.lineSeparator());
+
 		for(int i=2; i < commands.length ;i++){
+
 			Random rand = new Random(System.currentTimeMillis());
-			ArrayList<Character> charList = new ArrayList<>();
-			for (char c : commands[i].toCharArray()) {
-				charList.add(c);
+			ArrayList<String> charList = new ArrayList<>();
+
+			BreakIterator bi = BreakIterator.getCharacterInstance();
+			bi.setText(commands[i]);
+
+			int start = bi.first(), end = bi.next();
+			while(end != BreakIterator.DONE){
+				charList.add(commands[i].substring(start,end));
+				start = end;
+				end = bi.next();
 			}
+
 			Collections.shuffle(charList,rand);
+
 			charList.stream().forEach(e -> {
 				sb.append(e);
 			});
