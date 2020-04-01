@@ -146,27 +146,33 @@ public abstract class CommandStreaming extends StreamingSetter{
 
             if(REPLY){
 
+                //ブラックリストのユーザを排除
                 if(BlackListListener.isBanned(status)){
-                    if(new Random().nextInt(10) != 5){
+                    if(new Random().nextInt(10) != 5){//無視することもある
                         MentionListenerPlus.reply("BANされています！",status,true);
                     }
                     return;
-                }else if(status.getSource().matches(".*つまみちゃんかわいい.*")){
+                }
+                //自分(bot)を排除
+                else if(status.getSource().matches(".*つまみちゃんかわいい.*")){
                     System.out.println("This is bot!");
                     return;
                 }
 
                 String firstCmd = commands[1].trim().toLowerCase();
-                System.out.println("Input_command="+firstCmd); //TODO:あとで消す
+
                 if(mentionListenerMap.containsKey(firstCmd)) {
 
                     MentionListener listener = mentionListenerMap.get(firstCmd);
                     System.out.println("[cmd: " + listener.getCommandName() + "]");
                     listener.whenReplied(status, commands);
+
                 }else {
-                    System.out.println("キーがありません！");
-                    new AutoReply().doWhenReceiveCommand(status,commands);
+                    if(status.getInReplyToUserId()==FrogRobo.FROGROBO_USER_ID) {
+                        new AutoReply().doWhenReceiveCommand(status, commands);
+                    }
                 }
+
             }else{
                 //TODO: isMentionの処理を行う
             }
