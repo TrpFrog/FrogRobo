@@ -41,6 +41,7 @@ public abstract class StreamingSetter{
 
 	StreamingSetter(){
 		//nothing to do.
+		
 	}
 
 	/**
@@ -156,8 +157,9 @@ public abstract class StreamingSetter{
 				try{
 					if(postCloseMsg){
 						Twitter tw = getTwitter();
+						User user = tw.verifyCredentials();
 						tw.updateStatus("ロボオフ\n["+new Date()+"]");
-						tw.updateProfile("つまみロボ [停止中]", null, null, null);
+//						tw.updateProfile("つまみロボ(停止中)", user.getURL(), user.getLocation(), user.getDescription());
 					}
 				}catch(TwitterException e){
 					e.printStackTrace();
